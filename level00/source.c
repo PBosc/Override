@@ -2,18 +2,18 @@
 #include <stdlib.h>
 
 int main(void) {
-	int input[4];
+	int input;
 
 	puts("***********************************");
 	puts("* \t     -Level00 -\t\t  *");
 	puts("***********************************");
 	printf("Password:");
-	scanf("%d", input);
-	if (input[0] == 5276) {
+	scanf("%d", &input);
+	if (input == 5276) {
 		puts("\nAuthenticated!");
 		system("/bin/sh");
 	} else {
 		puts("\nInvalid Password!");
 	}
-	return input[0] != 5276;
+	return input != 5276;
 }
