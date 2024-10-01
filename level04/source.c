@@ -8,7 +8,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv, char** envp) {
 	pid_t pid = fork();
 	char input[128];
 	memset(input, 0, 128);
