@@ -4,8 +4,8 @@ section .text
 	global _start
 
 _start:
-	xor eax, eax
-    push eax
+	xor  eax, eax
+	push eax;
 	push 0x90909090
 	push 0x90909090
 	push 0x90909090

@@ -19,7 +19,7 @@ unsigned int get_unum(void) {
 
 	input[0] = 0;
 	fflush(stdout);
-	scanf("%d", input);
+	scanf("%u", input);
 	clear_stdin();
 	return input[0];
 }
@@ -55,10 +55,10 @@ int read_number(int* storage) {
 int main(int argc, char** args, char** envp) {
 	char c;
 	int iVar2;
-	uint uVar3;
+	unsigned int uVar3;
 	char* tmp;
 	char* pcVar5;
-	byte* pbVar6;
+	char* pbVar6;
 	int in_GS_OFFSET;
 	bool bVar7;
 	bool bVar8;
@@ -123,7 +123,7 @@ int main(int argc, char** args, char** envp) {
 		uVar3 = ~uVar3;
 		bVar7 = uVar3 == 1;
 		bVar9 = uVar3 == 2;
-		*(undefined*)((int)&ret + uVar3 + 2) = 0;
+		*(char*)((int)&ret + uVar3 + 2) = 0;
 		if (strncmp(command, "store", 5)) {
 			ret = store_number(storage);
 		} else {
