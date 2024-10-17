@@ -18,9 +18,7 @@ int main(void)
     int is_ok;
 
     for (int i = 0; i < 16; i++)
-    {
         input[i] = '\0';
-    }
     puts("********* ADMIN LOGIN PROMPT *********");
     printf("Enter Username: ");
     fgets(a_user_name, 256, stdin);

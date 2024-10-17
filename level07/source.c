@@ -56,16 +56,13 @@ int read_number(int *storage)
 int main(int argc, char **argv, char **envp)
 {
     char c;
-    unsigned int uVar3;
-    char *tmp;
     int in_GS_OFFSET;
     int storage[100];
-    int ret;
+    int ret = 0;
     char command[20];
     int local_14;
 
     local_14 = *(int *)(in_GS_OFFSET + 0x14);
-    ret = 0;
     for (int i = 0; i < 100; i++)
         storage[i] = 0;
     for (int i = 0; argv[i]; i++)
@@ -87,18 +84,6 @@ int main(int argc, char **argv, char **envp)
         printf("Input command: ");
         ret = 1;
         fgets(&command, 20, stdin);
-        uVar3 = 0xffffffff;
-        tmp = &command;
-        do
-        {
-            if (uVar3 == 0)
-                break;
-            uVar3--;
-            c = *tmp;
-            tmp++;
-        } while (c != '\0');
-        uVar3 = ~uVar3;
-        *(char *)((int)&ret + uVar3 + 2) = 0;
         if (strncmp(command, "store", 5))
         {
             ret = store_number(storage);
