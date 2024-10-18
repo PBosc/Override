@@ -2,11 +2,9 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
-#include <time.h>
 
 int main(void)
 {
-    srand(time(NULL));
     puts("***********************************");
     puts("*\t\tlevel03\t\t**");
     puts("***********************************");

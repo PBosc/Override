@@ -1,3 +1,5 @@
+# Level 9
+
 Here, we go back to a more classic buffer overflow exploit. We see at first the secret_backdoor function that can execute whichever command we want. We can make it execute /bin/sh or just simply cat /home/users/end/.pass at the end if we manage to get inside it. First we find the address of this function using any disassembly tool.
 
 The binary works simply and writes a message given as input. It stores it in a struct with the message at first followed by the username then the length of the message that is supposed to be limited to 128.

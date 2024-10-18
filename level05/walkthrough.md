@@ -1,4 +1,5 @@
-##
+# Level 5
+
 This time we instantly see a very bad printf usage that is vulnerable to format string attack. This is a classic format string attack where we will replace the address of the exit function in the GOT with the address of our shellcode. But this time our shellcode will not work because it has to get through a to_lower function. We have to cook a new shellcode that does not contain any ascii character between `@` and `[`. The new shellcode is a bit different, we cannot use push eax or a few other little subtilities but it is not that bad to make (yes it was). We place our shellcode in the environment to not be bothered with overflow or stack smashing and everything because our shellcode is big and we add NOPs to make sure we get a little bit of error margin. Last little subtility is we have to write the address in two halves because it is too big and will overflow the stdio buffer.
 
 Finally to get the address of the env, we used [the code](./Ressources/getenv.c).

@@ -1,3 +1,5 @@
+# Level 1
+
 Here the vulnerable function is the second fgets which gets 100 characters in a 16 characters input buffer. We do not have a call to system in the program so we have to place a shellcode in executable memory first. The machine has no NX so we can place the shellcode everywhere but the easiest address to get is the address of the global variable a_user_name. We can easily get it using ltrace :
 
 ```bash

@@ -1,3 +1,5 @@
+# Level 6
+
 This one is very simple and pure reverse engineering : it will just take our login (it has to be 6+ characters), pass it through a hash function and compare the password we enter to the result of this function.
 
 We just have to [remake the hash function](./Ressources/unhasher.py) on our side and execute it with the login we choose and then we get the password

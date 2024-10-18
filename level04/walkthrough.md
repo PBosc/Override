@@ -1,3 +1,5 @@
+# Level 4
+
 Here the program is using multiple process with the main process watching the child in which we will do our exploit to see if we are trying to use the exec syscall. So we have to cook a new shellcode that does not use the exec syscall. To do so we do an open, read, write on the .pass file which is faster but way bigger in characters.
 
 Now that we have our shellcode, we have to place it somewhere and the only place where we have nearly unlimited room to place our gigabig shellcode is the env. So we will place our variable in the env and use env -i to make sure the env is empty and the addresses are always the same.

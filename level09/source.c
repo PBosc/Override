@@ -22,9 +22,7 @@ void set_msg(char *param_1)
     char input[1024];
 
     for (int i = 0; i < 1024; i++)
-    {
         input[i] = '\0';
-    }
     puts(">: Msg @Unix-Dude");
     printf(">>: ");
     fgets(input, 1024, stdin);

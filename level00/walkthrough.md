@@ -1,3 +1,5 @@
+# Level 0
+
 First level is very simple, a prompt asks for a password and if the password is 5276, then it calls a shell and we can get the .pass of the next user
 
 ```bash

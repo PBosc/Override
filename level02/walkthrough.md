@@ -1,3 +1,5 @@
+# Level 2
+
 Here, with a little reverse engineering, we understand that in order to get to the systemcall to /bin/sh in the program, we need to input the password that we do not have since it is the one we are looking for. There is unfortunately no (or at least not any that we could find) easy exploit before that so we understand that this system call is a bait. Fortunately we have a very bad use of printf at the end, vulnerable to a format string attack. With gdb we can find that the password is stored in the stack at address $esp+22 to $esp+26 so 22nd to 26th element of the stack. We can just print these values with the format string like so :
 
 `%22$p %23$p %24$p %25$p %26$p`
