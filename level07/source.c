@@ -13,7 +13,6 @@ void clear_stdin(void)
     } while (chr != -1);
 }
 
-// TODO Recook
 unsigned int get_unum(void)
 {
     unsigned int input[3];
@@ -56,13 +55,10 @@ int read_number(int *storage)
 int main(int argc, char **argv, char **envp)
 {
     char c;
-    int in_GS_OFFSET;
     int storage[100];
     int ret = 0;
     char command[20];
-    int local_14;
 
-    local_14 = *(int *)(in_GS_OFFSET + 0x14);
     for (int i = 0; i < 100; i++)
         storage[i] = 0;
     for (int i = 0; argv[i]; i++)

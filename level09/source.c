@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 
+typedef struct message_s {
+    char message[140];
+    char username[40];
+    int len;
+} message_t;
+
 void secret_backdoor(void)
 {
     char input[128];
@@ -43,22 +49,12 @@ void set_username(char *param_1)
 
 void handle_msg(void)
 {
-    char local_c8[140];
-    undefined8 local_3c; // TODO Finir
-    undefined8 local_34;
-    undefined8 local_2c;
-    undefined8 local_24;
-    undefined8 local_1c;
-    undefined4 local_14;
+    message_t message;
 
-    local_3c = 0;
-    local_34 = 0;
-    local_2c = 0;
-    local_24 = 0;
-    local_1c = 0;
-    local_14 = 140;
-    set_username(local_c8);
-    set_msg(local_c8);
+    memset(message.username, 0, 40);
+    message.len = 140;
+    set_username(message.message);
+    set_msg(message.message);
     puts(">: Msg sent!");
     return;
 }

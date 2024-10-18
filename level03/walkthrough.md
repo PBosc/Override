@@ -1,7 +1,5 @@
-La fonction 'decrypt' xor tout les characteres de 'Q}|u`sfg~sf{}|a3' avec 322424845 - notre input -> bruteforce
-
 Here, our input is converted to an int then used as a key to a decrypt function that takes every character in the string ``Q}|u`sfg~sf{}|a3`` and applies a xor to each character with 322424845 - our input then compares the output of this with "Congratulation" we can bruteforce it since there are only a few possible ints that could work. We use [our mini bruteforce script](./Ressources/exploit.py) to get the answer.
-
+##
 ```bash
 python exploit.py 
 18 322424827
