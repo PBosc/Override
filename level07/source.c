@@ -32,7 +32,7 @@ int store_number(int *storage)
     printf(" Number: ");
     data = get_unum();
     printf(" Index: ");
-    idx = get_unum();
+    idx = get_unum() << 2;
     if (idx % 3 == 0 || (data >> 24 == 183))
     {
         puts(" *** ERROR! ***");
